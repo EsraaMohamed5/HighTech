@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="High Tech - منصة تعليمية تقنية متكاملة لتعلم البرمجة والتصميم وتحليل البيانات">
+  <title>High Tech - ابدأ الرحلة صح!</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">High <span class="t">T</span><span class="e">e</span><span class="t">ch</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">من نحن ؟</a></li>
+        <li><a href="courses.html">الدورات التدريبية</a></li>
+        <li><a href="#services">الخدمات للشركات</a></li>
+      </ul>
+      <div class="nav-actions">
+        <span class="lang">EN</span>
+        <button class="btn btn-ghost">تسجيل دخول</button>
+        <button class="btn btn-primary">انشاء حساب</button>
+      </div>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about">من نحن ؟</a>
+      <a href="courses.html">الدورات التدريبية</a>
+      <a href="#services">الخدمات للشركات</a>
+      <div style="display:flex;gap:0.5rem;margin-top:0.5rem;">
+        <button class="btn btn-ghost">تسجيل دخول</button>
+        <button class="btn btn-primary">انشاء حساب</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-text">
+        <h1>ابدأ الرحلة صح!</h1>
+        <p>ابدأ تعلم مع +200 فيديو مقدمة من أفضل المدربين في مختلف المجالات<br>او ابدأ مشروعك مع خدمات High Tech المميزة</p>
+        <div class="hero-buttons">
+          <button class="btn btn-white" style="color:var(--primary);">▶ مشاهدة فيديو</button>
+          <button class="btn btn-outline">ابدأ تعلم ←</button>
+          <button class="btn btn-gold">ابدأ مشروعك</button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://placehold.co/500x375/3b82f6/ffffff?text=High+Tech" alt="High Tech - تعلم البرمجة">
+      </div>
+    </div>
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 80" fill="none"><path d="M0 80V40C240 0 480 0 720 40C960 80 1200 80 1440 40V80H0Z" fill="white"/></svg>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="categories" id="about">
+    <div class="container">
+      <h2>اكتشف دورات تدريبية مميزة في مختلف المجالات</h2>
+      <div class="cat-list">
+        <button class="cat-btn">🎨 UI/UX Design</button>
+        <button class="cat-btn">💻 Front-end</button>
+        <button class="cat-btn">⚙️ Back-end</button>
+        <button class="cat-btn">📱 Mobile Applications</button>
+        <button class="cat-btn">🖌️ Graphic Design</button>
+        <button class="cat-btn">📊 Data Analysis</button>
+        <button class="cat-btn">🎬 Video Editing</button>
+        <button class="cat-btn">🧊 3D Design</button>
+        <button class="cat-btn">🎙️ Voice Over</button>
+        <button class="cat-btn">🇬🇧 English</button>
+        <button class="cat-btn">🇮🇹 Italy</button>
+        <button class="cat-btn">🇩🇪 Germany</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates -->
+  <section class="certificates">
+    <div class="container">
+      <div class="cert-img">
+        <img src="https://placehold.co/380x480/3b82f6/ffffff?text=Certificate" alt="شهادة معتمدة">
+      </div>
+      <div class="cert-text">
+        <h2>الشهادات التي نمنحها</h2>
+        <p>أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ. أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ. حطي كلمن سعفص قرشت ثخذ ضظغ. أبجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ.</p>
+        <div class="cert-logos">
+          <div class="cert-logo">itida</div>
+          <div class="cert-logo">CREATIVA</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="container">
+      <h2>بعض آراء المتدربين</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src="https://placehold.co/48/3b82f6/ffffff?text=خ" alt="خالد" class="testimonial-avatar">
+            <div>
+              <div class="testimonial-name">خالد اسماعيل احمد</div>
+              <div class="testimonial-course">كورس Front-end</div>
+            </div>
+          </div>
+          <p class="testimonial-text">كورس رائع جدا قدرت من خلاله اطور من مهاراتي في مجال برمجة المواقع الالكترونية و احسن من البورتفوليو بتاعي</p>
+          <div class="stars">★★★★★</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src="https://placehold.co/48/eab308/ffffff?text=ش" alt="شهد" class="testimonial-avatar">
+            <div>
+              <div class="testimonial-name">شهد احمد محمد</div>
+              <div class="testimonial-course">كورس الجرافيك ديزاين</div>
+            </div>
+          </div>
+          <p class="testimonial-text">كورس مفيد جدا جدا اتعلمت منه حاجات كتيرة و حقيقي بأس عندها خبرة كبيرة و بيقدروا يوصلوا المعلومة بصورة سهلة وبسيطة</p>
+          <div class="stars">★★★★★</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src="https://placehold.co/48/1b5e3a/ffffff?text=م" alt="محمود" class="testimonial-avatar">
+            <div>
+              <div class="testimonial-name">محمود طه عمرو</div>
+              <div class="testimonial-course">كورس تصميم UI/UX</div>
+            </div>
+          </div>
+          <p class="testimonial-text">اتعلمت حاجات كتيرة مفيدة زي ازاي اعمل دراسة للعملاء و اعرف نقاط القوة و الضعف عند المنافسين</p>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trainers -->
+  <section class="trainers">
+    <div class="container">
+      <h2>تعرف علي مدربينا</h2>
+      <div class="trainers-grid">
+        <div class="trainer-card">
+          <div class="trainer-avatar"><img src="https://placehold.co/96/3b82f6/ffffff?text=مينا" alt="مينا عماد"></div>
+          <div class="trainer-name">مينا عماد</div>
+          <div class="trainer-role">الامن السيبراني</div>
+        </div>
+        <div class="trainer-card">
+          <div class="trainer-avatar"><img src="https://placehold.co/96/eab308/ffffff?text=كريستين" alt="كريستين عماد"></div>
+          <div class="trainer-name">كريستين عماد</div>
+          <div class="trainer-role">محللة بيانات</div>
+        </div>
+        <div class="trainer-card">
+          <div class="trainer-avatar"><img src="https://placehold.co/96/1b5e3a/ffffff?text=عبدالرحمن" alt="عبد الرحمن زغلول"></div>
+          <div class="trainer-name">عبد الرحمن زغلول</div>
+          <div class="trainer-role">مبرمج Front-end</div>
+        </div>
+        <div class="trainer-card">
+          <div class="trainer-avatar"><img src="https://placehold.co/96/ef4444/ffffff?text=انجيلوس" alt="انجيلوس رزق"></div>
+          <div class="trainer-name">انجيلوس رزق</div>
+          <div class="trainer-role">مبرمج Flutter</div>
+        </div>
+        <div class="trainer-card">
+          <div class="trainer-avatar"><img src="https://placehold.co/96/8b5cf6/ffffff?text=جون" alt="جون محسن"></div>
+          <div class="trainer-name">جون محسن</div>
+          <div class="trainer-role">مصمم UI/UX</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="text">
+        <h3>اشترك الآن واحصل علي <span class="gold">خصم 40%</span></h3>
+        <p>علي جميع الباقات</p>
+      </div>
+      <button class="btn btn-white">اشترك الآن</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">© 2024 High Tech. جميع الحقوق محفوظة.</div>
+  </footer>
+
+  <!-- Chat FAB -->
+  <button class="chat-fab">💬</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

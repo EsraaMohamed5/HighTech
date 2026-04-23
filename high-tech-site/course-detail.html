@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="كورس تعلم تصميم UI/UX - High Tech">
+  <title>كورس تعلم تصميم UI/UX - High Tech</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">High <span class="t">T</span><span class="e">e</span><span class="t">ch</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html#about">من نحن ؟</a></li>
+        <li><a href="courses.html">الدورات التدريبية</a></li>
+        <li><a href="index.html#services">الخدمات للشركات</a></li>
+      </ul>
+      <div class="nav-actions">
+        <span class="lang">EN</span>
+        <button class="btn btn-ghost">تسجيل دخول</button>
+        <button class="btn btn-primary">انشاء حساب</button>
+      </div>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html#about">من نحن ؟</a>
+      <a href="courses.html">الدورات التدريبية</a>
+      <a href="index.html#services">الخدمات للشركات</a>
+    </div>
+  </nav>
+
+  <div class="container" style="padding-top:2rem;padding-bottom:2rem;">
+    <div class="breadcrumb">🏠 &lt; ابدأ تعلم &lt; UI/UX Design</div>
+    <h1 class="page-header">كورس تعلم تصميم UI/UX</h1>
+
+    <!-- Overview -->
+    <div class="course-overview">
+      <div class="left">
+        <img src="https://placehold.co/600x256/3b82f6/ffffff?text=UI/UX+Course" alt="UI/UX Course">
+        <div class="course-stats">
+          <span>⏱ 25-30 ساعة</span>
+          <span>🎬 28 فيديو</span>
+          <span>👥 118</span>
+          <span>⭐ 4.9</span>
+        </div>
+      </div>
+      <div class="right">
+        <h3>نبذة عن الدورة</h3>
+        <p>دورة تصميم UI/UX هي دورة تدريبية تهدف إلى تعليم المتدربين كيفية تصميم واجهات المستخدم (UI) وتجربة المستخدم (UX) بشكل فعال وجذاب. تشمل الدورة تعلم الأسس والمبادئ الأساسية لتصميم واجهات المستخدم التي تكون سهلة الاستخدام ومناسبة لاحتياجات المستخدمين.</p>
+        <button class="btn btn-primary">اشترك الآن</button>
+      </div>
+    </div>
+
+    <!-- Course Content -->
+    <div class="course-content">
+      <h2>محتوى الكورس</h2>
+
+      <div class="level-accordion">
+        <button class="level-header">مقدمة</button>
+        <div class="level-body open">
+          <div class="lesson-row"><span class="duration">٩ دقيقة</span><div class="title"><span>١- مقدمة عن تصميم UI/UX</span> <span class="icon-check">✓</span></div></div>
+          <div class="lesson-row"><span class="duration">٢٩ دقيقة</span><div class="title"><span>٢- ما معنى UX وما معنى ال UI ؟</span> <span class="icon-check">✓</span></div></div>
+        </div>
+      </div>
+
+      <div class="level-accordion">
+        <button class="level-header" onclick="toggleAccordion(this)">
+          <span>▼</span>
+          <span>المستوى: المبتدئ</span>
+        </button>
+        <div class="level-body open">
+          <div class="lesson-row"><span class="duration">٤٥ دقيقة</span><div class="title"><span>١- كيفية تصميم تجربة المستخدم ؟</span> <span class="icon-check">✓</span></div></div>
+          <div class="lesson-row"><span class="duration">٥٠ دقيقة</span><div class="title"><span>٢- متطلبات المشروع ودراسة المنافسين ؟</span> <span class="icon-lock">🔒</span></div></div>
+          <div class="lesson-row"><span class="duration">٣٠ دقيقة</span><div class="title"><span>٣- دراسة المستخدم</span> <span class="icon-lock">🔒</span></div></div>
+          <div class="lesson-row"><span class="duration">٤٥ دقيقة</span><div class="title"><span>٤- اكتشاف المستخدم</span> <span class="icon-lock">🔒</span></div></div>
+          <div class="lesson-row"><span class="duration">٤٠ دقيقة</span><div class="title"><span>٥- تحليل البيانات</span> <span class="icon-lock">🔒</span></div></div>
+          <div class="lesson-row"><span class="duration">٨٠ دقيقة</span><div class="title"><span>٦- ما هو ال Information Architecture ؟</span> <span class="icon-lock">🔒</span></div></div>
+          <div class="lesson-row"><span class="duration">٩٠ دقيقة</span><div class="title"><span>٧- ما هو ال User journey, Usability, User testing ؟</span> <span class="icon-lock">🔒</span></div></div>
+          <div class="lesson-row"><span class="duration">٨٠ دقيقة</span><div class="title"><span>٨- عمل دراسة حالة (UX case study reflection)</span> <span class="icon-lock">🔒</span></div></div>
+        </div>
+      </div>
+
+      <div class="level-accordion">
+        <button class="level-header" onclick="toggleAccordion(this)"><span>▶</span><span>المستوى: المتوسط</span></button>
+        <div class="level-body"></div>
+      </div>
+
+      <div class="level-accordion">
+        <button class="level-header" onclick="toggleAccordion(this)"><span>▶</span><span>المستوى: المتقدم</span></button>
+        <div class="level-body"></div>
+      </div>
+    </div>
+
+    <!-- Trainer -->
+    <div class="trainer-about">
+      <h2>نبذة عن المدرب</h2>
+      <img src="https://placehold.co/80/8b5cf6/ffffff?text=جون" alt="جون محسن">
+      <div class="name">جون محسن</div>
+      <div class="role">مصمم UI/UX</div>
+      <p class="bio">جون محسن، مصمم محترف في مجال تصميم واجهات المستخدم (UI) وتجربة المستخدم (UX) مع أكثر من (3) سنوات من الخبرة في تطوير وتصميم تجارب رقمية مبتكرة ومؤثرة.</p>
+    </div>
+
+    <!-- Pricing -->
+    <div class="pricing">
+      <h2>تفاصيل الاشتراك</h2>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>الباقة الأساسية</h3>
+          <div class="price">399 EGP</div>
+          <ul>
+            <li>✓ محتوي الكورس الاساسي</li>
+            <li>✓ متابعة عن طريق تدريبات بعد كل درس</li>
+            <li>✓ متابعة عن طريق جروب (Community)</li>
+            <li>✓ متابعة بشات مخصص مع المدرب</li>
+            <li class="excluded">× حضور لايف مع المدرب</li>
+          </ul>
+          <button class="btn btn-primary">اشترك الآن</button>
+        </div>
+        <div class="pricing-card featured">
+          <h3>الباقة المتوسطة</h3>
+          <div class="price">499 EGP</div>
+          <ul>
+            <li>✓ محتوي الكورس الاساسي</li>
+            <li>✓ متابعة عن طريق تدريبات بعد كل درس</li>
+            <li>✓ متابعة عن طريق جروب (Community)</li>
+            <li class="excluded">× متابعة بشات مخصص مع المدرب</li>
+            <li class="excluded">× حضور لايف مع المدرب</li>
+          </ul>
+          <button class="btn btn-primary">اشترك الآن</button>
+        </div>
+        <div class="pricing-card">
+          <h3>الباقة المتقدمة</h3>
+          <div class="price">599 EGP</div>
+          <ul>
+            <li>✓ محتوي الكورس الاساسي</li>
+            <li>✓ متابعة عن طريق تدريبات بعد كل درس</li>
+            <li>✓ متابعة عن طريق جروب (Community)</li>
+            <li>✓ متابعة بشات مخصص مع المدرب</li>
+            <li>✓ حضور لايف مع المدرب</li>
+          </ul>
+          <button class="btn btn-primary">اشترك الآن</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Similar Courses -->
+    <div class="similar-courses">
+      <h2>كورسات مشابهة</h2>
+      <div class="similar-grid">
+        <a href="course-detail.html" class="similar-card">
+          <div class="placeholder"></div>
+          <div class="info"><h4>Data Analysis</h4><p>للمستوى: متوسط</p></div>
+        </a>
+        <a href="course-detail.html" class="similar-card">
+          <div class="placeholder"></div>
+          <div class="info"><h4>Front-end Developing</h4><p>للمستوى: متقدم</p></div>
+        </a>
+        <a href="course-detail.html" class="similar-card">
+          <div class="placeholder"></div>
+          <div class="info"><h4>Mobile Application (Flutter)</h4><p>للمستوى: متوسط</p></div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <section class="cta-banner">
+    <div class="container">
+      <div class="text">
+        <h3>اشترك الآن واحصل علي <span class="gold">خصم 40%</span></h3>
+        <p>علي جميع الباقات</p>
+      </div>
+      <button class="btn btn-white">اشترك الآن</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">© 2024 High Tech. جميع الحقوق محفوظة.</div>
+  </footer>
+  <button class="chat-fab">💬</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

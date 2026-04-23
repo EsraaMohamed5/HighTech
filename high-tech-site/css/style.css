@@ -1,0 +1,281 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap');
+
+:root {
+  --background: #ffffff;
+  --foreground: #2d3748;
+  --primary: #3b82f6;
+  --primary-fg: #ffffff;
+  --secondary: #1b5e3a;
+  --secondary-fg: #ffffff;
+  --muted: #f1f5f9;
+  --muted-fg: #64748b;
+  --accent: #eab308;
+  --accent-fg: #2d3748;
+  --destructive: #ef4444;
+  --border: #e2e8f0;
+  --card: #ffffff;
+  --card-fg: #2d3748;
+  --radius: 0.5rem;
+  --hero-start: #3b82f6;
+  --hero-end: #2563a8;
+  --cta-start: #1b5e3a;
+  --cta-end: #267a50;
+  --gold: #eab308;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+  background: var(--background);
+  color: var(--foreground);
+  line-height: 1.6;
+}
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; font-family: inherit; }
+img { max-width: 100%; height: auto; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+
+/* Navbar */
+.navbar {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(255,255,255,0.95); backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+.navbar .container {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 0.75rem; padding-bottom: 0.75rem;
+}
+.navbar .logo { font-size: 1.5rem; font-weight: 800; }
+.navbar .logo .t { color: var(--primary); }
+.navbar .logo .e { color: var(--gold); }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { font-weight: 600; font-size: 0.875rem; color: var(--foreground); opacity: 0.8; transition: color 0.2s; }
+.nav-links a:hover { color: var(--primary); opacity: 1; }
+.nav-actions { display: flex; align-items: center; gap: 0.75rem; }
+.nav-actions .lang { font-size: 0.875rem; color: var(--muted-fg); cursor: pointer; }
+.btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1.5rem; border-radius: 9999px; font-weight: 700; font-size: 0.875rem; border: none; transition: all 0.2s; }
+.btn-ghost { background: transparent; color: var(--foreground); }
+.btn-ghost:hover { background: var(--muted); }
+.btn-primary { background: var(--primary); color: var(--primary-fg); }
+.btn-primary:hover { opacity: 0.9; }
+.btn-outline { background: transparent; border: 2px solid var(--primary-fg); color: var(--primary-fg); }
+.btn-outline:hover { background: rgba(255,255,255,0.1); }
+.btn-gold { background: var(--gold); color: var(--foreground); }
+.btn-gold:hover { opacity: 0.9; }
+.btn-white { background: white; color: var(--secondary); }
+.btn-white:hover { opacity: 0.9; }
+.hamburger { display: none; background: none; border: none; font-size: 1.5rem; }
+.mobile-menu { display: none; padding: 1rem; border-top: 1px solid var(--border); }
+.mobile-menu.open { display: block; }
+.mobile-menu a { display: block; padding: 0.5rem 0; font-weight: 600; color: var(--foreground); }
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, var(--hero-start), var(--hero-end));
+  padding: 4rem 0; position: relative; overflow: hidden;
+}
+.hero .container { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
+.hero-text { flex: 1; min-width: 300px; text-align: right; }
+.hero-text h1 { font-size: 3rem; font-weight: 800; color: white; line-height: 1.2; margin-bottom: 1rem; }
+.hero-text p { color: rgba(255,255,255,0.9); font-size: 1.125rem; max-width: 500px; margin-bottom: 1.5rem; }
+.hero-buttons { display: flex; flex-wrap: wrap; gap: 1rem; }
+.hero-image { flex: 1; min-width: 280px; text-align: center; }
+.hero-image img { max-width: 500px; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3)); }
+.hero-wave { position: absolute; bottom: 0; left: 0; right: 0; }
+.hero-wave svg { display: block; width: 100%; }
+
+/* Categories */
+.categories { padding: 4rem 0; text-align: center; }
+.categories h2 { font-size: 2rem; font-weight: 800; margin-bottom: 2.5rem; }
+.cat-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
+.cat-btn {
+  display: flex; align-items: center; gap: 0.5rem;
+  padding: 0.625rem 1.25rem; border-radius: 9999px;
+  border: 1px solid var(--border); background: var(--background);
+  font-size: 0.875rem; font-weight: 600; color: var(--foreground);
+  transition: all 0.2s;
+}
+.cat-btn:hover { border-color: var(--primary); background: rgba(59,130,246,0.05); }
+
+/* Certificates */
+.certificates { padding: 4rem 0; background: var(--muted); }
+.certificates .container { display: flex; align-items: center; gap: 3rem; flex-wrap: wrap; }
+.cert-img { flex: 1; min-width: 280px; text-align: center; }
+.cert-img img { border-radius: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 380px; width: 100%; object-fit: cover; }
+.cert-text { flex: 1; min-width: 300px; text-align: right; }
+.cert-text h2 { font-size: 2rem; font-weight: 800; margin-bottom: 1.25rem; }
+.cert-text p { color: var(--muted-fg); font-size: 1.125rem; line-height: 1.8; margin-bottom: 1rem; }
+.cert-logos { display: flex; gap: 1.5rem; justify-content: flex-end; }
+.cert-logo { width: 6rem; height: 3rem; background: var(--muted); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--muted-fg); font-size: 0.75rem; }
+
+/* Testimonials */
+.testimonials { padding: 4rem 0; text-align: center; }
+.testimonials h2 { font-size: 2rem; font-weight: 800; margin-bottom: 3rem; }
+.testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 0 auto; }
+.testimonial-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 1rem; padding: 1.5rem; text-align: right;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: box-shadow 0.2s;
+}
+.testimonial-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.testimonial-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+.testimonial-avatar { width: 3rem; height: 3rem; border-radius: 50%; object-fit: cover; }
+.testimonial-name { font-weight: 700; }
+.testimonial-course { font-size: 0.75rem; color: var(--muted-fg); }
+.testimonial-text { color: var(--muted-fg); font-size: 0.875rem; line-height: 1.7; margin-bottom: 1rem; }
+.stars { display: flex; gap: 0.25rem; justify-content: flex-end; color: var(--gold); }
+
+/* Trainers */
+.trainers { padding: 4rem 0; background: var(--muted); text-align: center; }
+.trainers h2 { font-size: 2rem; font-weight: 800; margin-bottom: 3rem; }
+.trainers-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; }
+.trainer-card { display: flex; flex-direction: column; align-items: center; gap: 0.75rem; cursor: pointer; }
+.trainer-avatar {
+  width: 6rem; height: 6rem; border-radius: 50%; overflow: hidden;
+  border: 4px solid rgba(59,130,246,0.2); transition: border-color 0.2s;
+}
+.trainer-card:hover .trainer-avatar { border-color: var(--primary); }
+.trainer-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.trainer-name { font-weight: 700; }
+.trainer-role { font-size: 0.75rem; color: var(--muted-fg); }
+
+/* CTA Banner */
+.cta-banner {
+  background: linear-gradient(135deg, var(--cta-start), var(--cta-end));
+  padding: 2rem 0;
+}
+.cta-banner .container {
+  display: flex; align-items: center; justify-content: center;
+  gap: 1.5rem; flex-wrap: wrap; text-align: center;
+}
+.cta-banner .text h3 { font-size: 1.5rem; font-weight: 700; color: white; }
+.cta-banner .text h3 .gold { color: var(--gold); }
+.cta-banner .text p { color: rgba(255,255,255,0.8); font-weight: 500; }
+
+/* Footer */
+.footer {
+  padding: 2rem 0; border-top: 1px solid var(--border);
+  text-align: center; color: var(--muted-fg); font-size: 0.875rem;
+}
+
+/* Chat FAB */
+.chat-fab {
+  position: fixed; bottom: 1.5rem; left: 1.5rem;
+  width: 3.5rem; height: 3.5rem; border-radius: 50%;
+  background: var(--primary); color: white; border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem; transition: transform 0.2s; z-index: 50;
+}
+.chat-fab:hover { transform: scale(1.1); }
+
+/* Courses Page */
+.page-header { font-size: 2rem; font-weight: 800; text-align: center; margin-bottom: 2rem; }
+.breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: var(--muted-fg); margin-bottom: 1.5rem; }
+.filter-section { margin-bottom: 1rem; text-align: right; }
+.filter-section .label { font-weight: 600; margin-bottom: 0.5rem; }
+.filter-buttons { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: flex-end; }
+.filter-btn {
+  padding: 0.5rem 1rem; border-radius: 9999px; font-size: 0.875rem;
+  font-weight: 600; border: 1px solid var(--border); background: var(--background);
+  color: var(--foreground); transition: all 0.2s;
+}
+.filter-btn:hover { border-color: var(--primary); }
+.filter-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+.courses-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
+.course-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 1rem; overflow: hidden; transition: box-shadow 0.2s;
+}
+.course-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+.course-card .thumb { height: 11rem; background: var(--muted); position: relative; overflow: hidden; }
+.course-card .thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
+.course-card:hover .thumb img { transform: scale(1.05); }
+.course-card .info { padding: 1rem; text-align: right; }
+.course-card .info h3 { font-weight: 700; margin-bottom: 0.5rem; }
+.course-card .info .meta { display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--muted-fg); }
+.level-beginner { color: var(--gold) !important; }
+.level-intermediate { color: var(--primary) !important; }
+.level-advanced { color: var(--destructive) !important; }
+.pagination { display: flex; gap: 0.5rem; align-items: center; font-size: 0.875rem; color: var(--muted-fg); }
+.pagination .active-page {
+  width: 2rem; height: 2rem; border-radius: 50%;
+  background: var(--primary); color: white;
+  display: flex; align-items: center; justify-content: center; font-weight: 700;
+}
+
+/* Course Detail */
+.course-overview { display: flex; gap: 2rem; flex-wrap: wrap; margin-bottom: 3rem; }
+.course-overview .left { flex: 1; min-width: 300px; }
+.course-overview .left img { width: 100%; height: 16rem; object-fit: cover; border-radius: 1rem; }
+.course-stats { display: flex; gap: 1.5rem; justify-content: center; margin-top: 1rem; font-size: 0.875rem; color: var(--muted-fg); }
+.course-overview .right { flex: 1; min-width: 300px; text-align: right; }
+.course-overview .right h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; }
+.course-overview .right p { color: var(--muted-fg); line-height: 1.8; margin-bottom: 1rem; }
+
+.course-content { max-width: 750px; margin: 0 auto 3rem; }
+.course-content h2 { text-align: center; font-size: 1.5rem; font-weight: 800; margin-bottom: 2rem; }
+.level-accordion { border: 1px solid var(--border); border-radius: 0.75rem; margin-bottom: 1rem; overflow: hidden; }
+.level-header {
+  width: 100%; display: flex; justify-content: space-between; align-items: center;
+  padding: 0.75rem 1.5rem; background: rgba(241,245,249,0.5);
+  font-weight: 700; border: none; font-size: 1rem; font-family: inherit;
+  color: var(--foreground);
+}
+.level-body { display: none; }
+.level-body.open { display: block; }
+.lesson-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 0.75rem 1.5rem; border-top: 1px solid var(--border); font-size: 0.875rem;
+}
+.lesson-row .title { display: flex; align-items: center; gap: 0.5rem; }
+.lesson-row .duration { color: var(--muted-fg); }
+.icon-check { color: var(--primary); }
+.icon-lock { color: var(--muted-fg); }
+
+.trainer-about { text-align: center; margin-bottom: 3rem; }
+.trainer-about h2 { font-size: 1.5rem; font-weight: 800; margin-bottom: 1.5rem; }
+.trainer-about img { width: 5rem; height: 5rem; border-radius: 50%; object-fit: cover; margin-bottom: 0.75rem; }
+.trainer-about .name { font-weight: 700; }
+.trainer-about .role { font-size: 0.875rem; color: var(--muted-fg); }
+.trainer-about .bio { color: var(--muted-fg); font-size: 0.875rem; max-width: 500px; margin: 0.5rem auto 0; }
+
+.pricing { max-width: 900px; margin: 0 auto 3rem; }
+.pricing h2 { text-align: center; font-size: 1.5rem; font-weight: 800; margin-bottom: 2rem; }
+.pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+.pricing-card {
+  border: 1px solid var(--border); border-radius: 1rem; padding: 1.5rem;
+  text-align: center; background: var(--card);
+}
+.pricing-card.featured { border-color: var(--primary); background: rgba(59,130,246,0.03); box-shadow: 0 8px 24px rgba(0,0,0,0.08); transform: scale(1.05); }
+.pricing-card h3 { font-weight: 700; font-size: 1.125rem; margin-bottom: 0.5rem; }
+.pricing-card .price { font-size: 1.875rem; font-weight: 800; margin-bottom: 1rem; }
+.pricing-card ul { list-style: none; text-align: right; margin-bottom: 1.5rem; }
+.pricing-card li { display: flex; align-items: center; gap: 0.5rem; justify-content: flex-end; padding: 0.25rem 0; font-size: 0.875rem; }
+.pricing-card li.excluded { color: var(--muted-fg); text-decoration: line-through; }
+.pricing-card .btn { width: 100%; justify-content: center; }
+
+.similar-courses { margin-bottom: 3rem; }
+.similar-courses h2 { text-align: center; font-size: 1.5rem; font-weight: 800; margin-bottom: 2rem; }
+.similar-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; max-width: 750px; margin: 0 auto; }
+.similar-card { background: var(--card); border: 1px solid var(--border); border-radius: 1rem; overflow: hidden; transition: box-shadow 0.2s; }
+.similar-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.similar-card .placeholder { height: 8rem; background: var(--muted); }
+.similar-card .info { padding: 0.75rem; text-align: right; }
+.similar-card .info h4 { font-weight: 700; font-size: 0.875rem; }
+.similar-card .info p { font-size: 0.75rem; color: var(--muted-fg); }
+
+@media (max-width: 768px) {
+  .nav-links, .nav-actions { display: none; }
+  .hamburger { display: block; }
+  .hero-text h1 { font-size: 2rem; }
+  .hero .container { flex-direction: column-reverse; text-align: center; }
+  .hero-text { text-align: center; }
+  .certificates .container { flex-direction: column; }
+  .cert-text { text-align: center; }
+  .cert-logos { justify-content: center; }
+  .course-overview { flex-direction: column; }
+  .pricing-card.featured { transform: none; }
+}
